@@ -23,11 +23,13 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Run tests with Maven
-        run: mvn test
+      - name: Run tests with Maven and create Report directory
+        run: |
+          mkdir -p Report
+          mvn test
 
-      - name: List files in the Report directory
-        run: ls -R Report
+      - name: List files in the project directory
+        run: ls -R
 
       - name: Archive test reports
         if: always()
