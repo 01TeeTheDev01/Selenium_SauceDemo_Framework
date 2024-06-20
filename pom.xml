@@ -55,9 +55,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <includes>
-                        <include>**/SauceDemoUITests.java</include>
-                    </includes>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>com.Listeners.SauceDemoTestListener</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>

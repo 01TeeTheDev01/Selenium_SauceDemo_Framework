@@ -1,10 +1,12 @@
-name: Java CI
+name: Java CI with TestNG
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -20,23 +22,12 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Create Report directory
-        run: mkdir -p Reports
-
-      - name: Run tests with Maven
-        run: mvn test
-
-      - name: List files in the project directory
-        run: ls -R
-
-      - name: List files in the Report directory
-        run: ls -R Reports
+      - name: Run tests with TestNG and generate report
+        run: mvn clean test -Dtestng.dtd.http=true
 
       - name: Archive test reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          path: Reports/*.html
+          name: SauceDemo Reports
+          path: target/*.html
