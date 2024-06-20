@@ -10,6 +10,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class SauceDemoTestListener implements ITestListener {
+
     private final IReportRepository _reportRepository;
     private ExtentTest extentTest;
 
