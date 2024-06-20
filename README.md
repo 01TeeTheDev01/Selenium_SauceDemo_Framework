@@ -19,7 +19,6 @@ Before you begin, ensure you have the following installed on your local machine:
 
 - Java Development Kit (JDK) 8 or higher
 - Maven
-- ChromeDriver or GeckoDriver (for Chrome and Firefox browsers respectively)
 
 ## Setup
 
