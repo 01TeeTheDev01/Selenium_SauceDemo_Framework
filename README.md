@@ -35,13 +35,7 @@ Before you begin, ensure you have the following installed on your local machine:
 
 ## Running Tests
 
-To run all tests, execute the following:
-
-```shell
-mvn clean install
-```
-
-Then run the `testng.xml` file located under the root folder of the project.
+To run all tests, execute the `testng.xml` file located under the root folder of the project.
 
 
 # Headless Mode in Selenium
