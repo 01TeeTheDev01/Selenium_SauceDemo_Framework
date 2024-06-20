@@ -114,6 +114,28 @@ public class FirefoxHeadless {
 }
 ```
 
+### Edge
+
+To run Edge in headless mode, you need to set the `--headless` argument in the `EdgeOptions`.
+
+```java
+public class FirefoxHeadless {
+
+    public static void main(String[] args) {
+        System.setProperty("webdriver.edge.driver", "/path/to/chromedriver");
+
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless");
+
+        WebDriver driver = new EdgeDriver(options);
+        driver.get("https://www.example.com");
+
+        System.out.println("Title: " + driver.getTitle());
+        driver.quit();
+    }
+}
+```
+
 ### Safari
 
 Safari does not support headless mode directly through the SafariDriver in Selenium. SafariDriver, unlike ChromeDriver or GeckoDriver, does not have a headless mode because Apple has not yet provided such functionality for Safari.
