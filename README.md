@@ -114,6 +114,11 @@ public class FirefoxHeadless {
 }
 ```
 
+### Safari
+
+Safari does not support headless mode directly through the SafariDriver in Selenium. SafariDriver, unlike ChromeDriver or GeckoDriver, does not have a headless mode because Apple has not yet provided such functionality for Safari.
+
+
 # Troubleshooting Java Issues
 
 This document provides troubleshooting tips and solutions for common issues encountered while working with Java applications and development environments.
