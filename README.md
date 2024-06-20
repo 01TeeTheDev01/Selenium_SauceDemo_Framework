@@ -260,6 +260,6 @@ Contributors who submit significant improvements will be credited in the project
 
 ## Contact
 
-If you have any questions or need further assistance, feel free to reach out to us through GitHub issues.
+If you have any questions or need further assistance, feel free to reach out through GitHub issues.
 
 Thank you for contributing to the project!
